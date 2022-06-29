@@ -3,13 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Rock, Paper, Scissors!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      
+        <div class="prompt">
+        Choose your weapon!
+        </div>
+        <div class="weapons">
+            <button class="Rock">Rock</button>
+            <button class="Scissors">Scissors</button>
+            <button class="Paper">Paper</button>
+        </div>
+        <div class="opponent">Your opponent has selected:</div>
+        <div class="computerSelection">
+            <div class="compOptionRock">Rock</div>
+            <div class="compOptionsPapaer">Paper</div>
+            <div class="compOptionsScissors">Scissors</div>
+        </div>
+        <div class="outcome">
+            <div class="wimMessage">You Win!</div>
+            <div class="winMessage">Computer Wins!</div>
+        </div>
         
         <script src="game.js" charset="utf-8"></script>
     </body>
