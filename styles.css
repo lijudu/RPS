@@ -1,8 +1,15 @@
 /* rock paper scissors!! */
-.computerSelection {
+#compRock {
     display: none;
 }
 
+#compPaper {
+    display: none;
+}
+
+#compScissors {
+    display: none;
+}
 .outcome {
     display: none;
 }
