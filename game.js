@@ -9,14 +9,23 @@ let paperBTN = document.getElementById("paperBTN");
 let scissorsBTN = document.getElementById("scissorsBTN");
 
 rockBTN.addEventListener("click", function(){
+    rockBTN.style.backgroundColor = "#F6828C";
+    paperBTN.style.backgroundColor = "white";
+    scissorsBTN.style.backgroundColor ="white";
     console.log(selectRock);
 });
 
 paperBTN.addEventListener("click", function (){
+    paperBTN.style.backgroundColor = "#F6828C";
+    rockBTN.style.backgroundColor ="white";
+    scissorsBTN.style.backgroundColor ="white";
     console.log(selectPaper);
 });
 
 scissorsBTN.addEventListener("click", function(){
+    scissorsBTN.style.backgroundColor = "#F6828C";
+    rockBTN.style.backgroundColor ="white";
+    paperBTN.style.backgroundColor ="white";
     console.log(selectScissors);
 });
 
@@ -47,7 +56,6 @@ function compSel() {
             document.getElementById("compRock").style.display="none";
         }
 }
-
 
 // write a function that play single round of RPS: compare playerSelection and computerSelection and declare winner 
 
