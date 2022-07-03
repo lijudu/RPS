@@ -38,10 +38,8 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            playerCount++;
-            return(playerCount);
-
-
+            console.log(playerCount);
+            console.log(computerCount);
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -51,7 +49,8 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block";
             computerCount++;
-            return(computerCount);
+            console.log(playerCount);
+            console.log(computerCount);
             
         }
         else if (ranNumb ==3) {
@@ -62,7 +61,8 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none"
             playerCount++;
-            return(playerCount);
+            console.log(playerCount);
+            console.log(computerCount);
         }
 });
 
@@ -76,7 +76,8 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none";
             playerCount++;
-            return(playerCount);
+            console.log(playerCount);
+            console.log(computerCount);
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -85,10 +86,8 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            playerCount++;
-            return(playerCount);
-            computerCount++;
-            return(computerCount);
+            console.log(playerCount);
+            console.log(computerCount);
             
         }
         else if (ranNumb ==3) {
@@ -99,7 +98,8 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block"
             computerCount++;
-            return(computerCount);
+            console.log(playerCount);
+            console.log(computerCount);
         }
 });
 
@@ -113,7 +113,8 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block";
             computerCount++;
-            return(computerCount);
+            console.log(playerCount);
+            console.log(computerCount);
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -123,7 +124,8 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none";
             playerCount++
-            return(playerCount);
+            console.log(playerCount);
+            console.log(computerCount);
             
         }
         else if (ranNumb ==3) {
@@ -133,21 +135,23 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            playerCount++;
-            return(playerCount);
-            computerCount++;
-            return(computerCount);
+            console.log(playerCount);
+            console.log(computerCount);
         }
 });
 
-//play 5 rounds and declare winner at the end of round
+//update player and computer score
+const totalCount = document.getElementById("playerScore");
+var count = 0;
+
+//play until 5 points reached
 const winner = setInterval(counter, 5);
 function counter() {
     if (playerCount == 5) {
         clearInterval(winner);
         console.log("Player Wins!");
     }
-    else if (computerCount ==5){
+    else if (computerCount == 5){
         clearInterval(winner);
         console.log("Computer Wins!");
     }
