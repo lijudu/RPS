@@ -10,6 +10,23 @@
 #compScissors {
     display: none;
 }
-.outcome {
+
+#winPlayer {
+    display: none;
+}
+
+#winComputer {
+    display: none;
+}
+
+#drawMessage {
+    display: none;
+}
+
+.winRound {
+    display: none;
+}
+
+.compRound {
     display: none;
 }

@@ -22,6 +22,13 @@ scissorsBTN.addEventListener("click", function(){
     return chooseScissors = 1;
 });
 
+
+// generate random number 1 (rock), 2 (paper), or 3 (scissors) to computer's selection
+// unhide value to show computer selection
+//declare winner 
+var playerCount = 0;
+var computerCount = 0;
+
 rockBTN.addEventListener("click",function(){
     let ranNumb = Math.floor(Math.random() * 3) + 1;
         if (ranNumb == 1 & chooseRock ==1) {
@@ -108,8 +115,5 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="none";
         }
 });
-// generate random number 1 (rock), 2 (paper), or 3 (scissors) to computer's selection 
 
-// unhide value to show opponent selection
-//Compare playerSelection and computerSelection and declare winner 
 //play 5 rounds and declare winner at the end of round

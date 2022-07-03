@@ -13,9 +13,9 @@
         Choose your weapon!
         </div>
         <div class="weapons">
-            <button id="rockBTN" onclick="compSel()">Rock</button>
-            <button id="paperBTN" onclick="compSel()">Paper</button>
-            <button id="scissorsBTN" onclick="compSel()">Scissors</button>
+            <button id="rockBTN">Rock</button>
+            <button id="paperBTN">Paper</button>
+            <button id="scissorsBTN">Scissors</button>
         </div>
         <div class="opponent">Your opponent has selected:</div>
         <div class="computerSelection">
@@ -24,9 +24,17 @@
             <div id="compScissors">Scissors</div>
         </div>
         <div class="outcome">
-            <div class="wimMessage">You Win!</div>
-            <div class="winMessage">Computer Wins!</div>
+            <div id="winPlayer">You win this round!</div>
+            <div id="winComputer">Computer wins this round!</div>
+            <div id="drawMessage">This round is a draw!</div>
         </div>
+        <div class="fiveRounds">Play 5 Rounds to Declare Winner!</div>
+            <div>Player Score</div>
+                <div id="playerScore">0</div>
+            <div>Computer Score</div>
+                <div id="compScore">0</div>
+            <div class="winRound">Congratulations, you win!</div>
+            <div class="compRound">Computer wins!</div>
         
     <script src="game.js" charset="utf-8"></script>
     </body>
