@@ -151,27 +151,29 @@ scissorsBTN.addEventListener("click",function(){
 
 
 //play until 5 points reached, declare Winner
-function disableButtons() {
-    document.getElementById("rockBTN").disabled = true;
-    document.getElementById("paperBTN").disabled = true;
-    document.getElementById("scissorsBTN").disabled = true;
-}
-
-
 const winner = setInterval(counter, 5);
 function counter() {
     if (playerCount == 5) {
         clearInterval(winner);
         document.getElementById("winRound").style.display="block";
-        console.log("Player Wins!");
         disableButtons();
         return;
     }
     else if (computerCount == 5){
         clearInterval(winner);
         document.getElementById("compRound").style.display="block"; 
-        console.log("Computer Wins!");
         disableButtons();
         return;
     }
 }
+//disable buttons after winner declared
+function disableButtons() {
+    document.getElementById("rockBTN").disabled = true;
+    document.getElementById("paperBTN").disabled = true;
+    document.getElementById("scissorsBTN").disabled = true;
+    document.getElementById("replay").style.display="block";
+}
+//reload page after winner declared
+replay.addEventListener("click", function(){
+    location.reload();
+});
