@@ -23,12 +23,29 @@ scissorsBTN.addEventListener("click", function(){
 });
 
 
-// generate random number 1 (rock), 2 (paper), or 3 (scissors) to computer's selection
-// unhide value to show computer selection
-//declare winner 
+// variables used
 var playerCount = 0;
 var computerCount = 0;
 
+var totalPlayerScore = document.getElementById("playerScore");
+var totalComputerScore = document.getElementById("compScore");
+
+//update player and computer score
+function incScore () {
+    var valuePlayer = totalPlayerScore.innerHTML;
+    valuePlayer++;
+    document.getElementById("playerScore").innerHTML = valuePlayer
+}
+
+function incCompScore() {
+    var valueComp = totalComputerScore.innerHTML;
+    valueComp++;
+    document.getElementById("compScore").innerHTML = valueComp
+}
+
+// generate random number 1 (rock), 2 (paper), or 3 (scissors) to computer's selection
+// unhide value to show computer selection
+//declare winner 
 rockBTN.addEventListener("click",function(){
     let ranNumb = Math.floor(Math.random() * 3) + 1;
         if (ranNumb == 1 & chooseRock ==1) {
@@ -40,6 +57,7 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="none";
             console.log(playerCount);
             console.log(computerCount);
+            
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -49,6 +67,7 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block";
             computerCount++;
+            incCompScore();
             console.log(playerCount);
             console.log(computerCount);
             
@@ -61,6 +80,7 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none"
             playerCount++;
+            incScore();
             console.log(playerCount);
             console.log(computerCount);
         }
@@ -76,6 +96,7 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none";
             playerCount++;
+            incScore();
             console.log(playerCount);
             console.log(computerCount);
         }
@@ -98,6 +119,7 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block"
             computerCount++;
+            incCompScore();
             console.log(playerCount);
             console.log(computerCount);
         }
@@ -113,6 +135,7 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="block";
             computerCount++;
+            incCompScore();
             console.log(playerCount);
             console.log(computerCount);
         }
@@ -124,6 +147,7 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winPlayer").style.display="block";
             document.getElementById("winComputer").style.display="none";
             playerCount++
+            incScore();
             console.log(playerCount);
             console.log(computerCount);
             
@@ -140,19 +164,18 @@ scissorsBTN.addEventListener("click",function(){
         }
 });
 
-//update player and computer score
-const totalCount = document.getElementById("playerScore");
-var count = 0;
 
-//play until 5 points reached
+//play until 5 points reached, declare Winner
 const winner = setInterval(counter, 5);
 function counter() {
     if (playerCount == 5) {
         clearInterval(winner);
+        document.getElementById("winRound").style.display="block";
         console.log("Player Wins!");
     }
     else if (computerCount == 5){
         clearInterval(winner);
+        document.getElementById("compRound").style.display="block"; 
         console.log("Computer Wins!");
     }
 }

@@ -23,10 +23,10 @@
     display: none;
 }
 
-.winRound {
+#winRound {
     display: none;
 }
 
-.compRound {
+#compRound {
     display: none;
 }
