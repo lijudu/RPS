@@ -34,12 +34,18 @@ var totalComputerScore = document.getElementById("compScore");
 function incScore () {
     var valuePlayer = totalPlayerScore.innerHTML;
     valuePlayer++;
+    if (valuePlayer >= 6){
+        return;
+    }
     document.getElementById("playerScore").innerHTML = valuePlayer
 }
 
 function incCompScore() {
     var valueComp = totalComputerScore.innerHTML;
     valueComp++;
+    if (valueComp >= 6){
+        return;
+    }
     document.getElementById("compScore").innerHTML = valueComp
 }
 
