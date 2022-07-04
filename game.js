@@ -4,8 +4,8 @@
 rockBTN.addEventListener("click", function() {
         rockBTN.style.backgroundColor = "#F6828C";
         paperBTN.style.backgroundColor = "white";
-        scissorsBTN.style.backgroundColor ="white";
-        return chooseRock = 1;        
+        scissorsBTN.style.backgroundColor ="white";  
+        return chooseRock = 1;   
 });
 
 paperBTN.addEventListener("click", function (){
@@ -31,23 +31,19 @@ var totalPlayerScore = document.getElementById("playerScore");
 var totalComputerScore = document.getElementById("compScore");
 
 //update player and computer score
-function incScore () {
+
+function incScore() {
     var valuePlayer = totalPlayerScore.innerHTML;
     valuePlayer++;
-    if (valuePlayer >= 6){
-        return;
-    }
-    document.getElementById("playerScore").innerHTML = valuePlayer
+    document.getElementById("playerScore").innerHTML = valuePlayer;
 }
 
 function incCompScore() {
     var valueComp = totalComputerScore.innerHTML;
     valueComp++;
-    if (valueComp >= 6){
-        return;
-    }
-    document.getElementById("compScore").innerHTML = valueComp
+    document.getElementById("compScore").innerHTML = valueComp;
 }
+
 
 // generate random number 1 (rock), 2 (paper), or 3 (scissors) to computer's selection
 // unhide value to show computer selection
@@ -61,8 +57,6 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            console.log(playerCount);
-            console.log(computerCount);
             
         }
         else if (ranNumb == 2) {
@@ -74,8 +68,6 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="block";
             computerCount++;
             incCompScore();
-            console.log(playerCount);
-            console.log(computerCount);
             
         }
         else if (ranNumb ==3) {
@@ -87,8 +79,7 @@ rockBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="none"
             playerCount++;
             incScore();
-            console.log(playerCount);
-            console.log(computerCount);
+
         }
 });
 
@@ -103,8 +94,7 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="none";
             playerCount++;
             incScore();
-            console.log(playerCount);
-            console.log(computerCount);
+
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -113,8 +103,6 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            console.log(playerCount);
-            console.log(computerCount);
             
         }
         else if (ranNumb ==3) {
@@ -126,8 +114,6 @@ paperBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="block"
             computerCount++;
             incCompScore();
-            console.log(playerCount);
-            console.log(computerCount);
         }
 });
 
@@ -142,8 +128,6 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="block";
             computerCount++;
             incCompScore();
-            console.log(playerCount);
-            console.log(computerCount);
         }
         else if (ranNumb == 2) {
             document.getElementById("compPaper").style.display="block";
@@ -154,9 +138,6 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("winComputer").style.display="none";
             playerCount++
             incScore();
-            console.log(playerCount);
-            console.log(computerCount);
-            
         }
         else if (ranNumb ==3) {
             document.getElementById("compScissors").style.display="block";
@@ -165,23 +146,32 @@ scissorsBTN.addEventListener("click",function(){
             document.getElementById("drawMessage").style.display="block";
             document.getElementById("winPlayer").style.display="none";
             document.getElementById("winComputer").style.display="none";
-            console.log(playerCount);
-            console.log(computerCount);
         }
 });
 
 
 //play until 5 points reached, declare Winner
+function disableButtons() {
+    document.getElementById("rockBTN").disabled = true;
+    document.getElementById("paperBTN").disabled = true;
+    document.getElementById("scissorsBTN").disabled = true;
+}
+
+
 const winner = setInterval(counter, 5);
 function counter() {
     if (playerCount == 5) {
         clearInterval(winner);
         document.getElementById("winRound").style.display="block";
         console.log("Player Wins!");
+        disableButtons();
+        return;
     }
     else if (computerCount == 5){
         clearInterval(winner);
         document.getElementById("compRound").style.display="block"; 
         console.log("Computer Wins!");
+        disableButtons();
+        return;
     }
 }
