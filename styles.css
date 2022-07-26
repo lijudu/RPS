@@ -11,34 +11,22 @@ h1 {
     
 }
 
-.prompt, .weapons, .opponent, .outcome, .fiveRounds, .pScore, .cScore, #playerScore, #compScore, .computerSelection {
+.prompt, .opponent, .outcome, .fiveRounds, .pScore, .cScore, #playerScore, #compScore, #computerSelection, #outcome {
     display: flex;
     justify-content: center;
 }
 
-#compRock {
-    display: none;
+.weapons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-#compPaper {
-    display: none;
-}
-
-#compScissors {
-    display: none;
-}
-
-#winPlayer {
-    display: none;
-}
-
-#winComputer {
-    display: none;
-}
-
-#drawMessage {
-    display: none;
-}
+#rockBTN, #paperBTN, #scissorsBTN {
+    font-size: 15px;
+    border: 2px solid gray;
+    border-radius: 6px;
+} 
 
 #winMessage {
     display: flex;

@@ -51,32 +51,20 @@ function incCompScore() {
 rockBTN.addEventListener("click",function(){
     let ranNumb = Math.floor(Math.random() * 3) + 1;
         if (ranNumb == 1 & chooseRock ==1) {
-            document.getElementById("compRock").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="block";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="none";
+            document.getElementById("computerSelection").innerText="Rock";
+            document.getElementById("outcome").innerText="It's a draw!";
             
         }
         else if (ranNumb == 2) {
-            document.getElementById("compPaper").style.display="block";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="block";
+            document.getElementById("computerSelection").innerText="Paper";
+            document.getElementById("outcome").innerText="Computer Wins!";
             computerCount++;
             incCompScore();
             
         }
         else if (ranNumb ==3) {
-            document.getElementById("compScissors").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="block";
-            document.getElementById("winComputer").style.display="none"
+            document.getElementById("computerSelection").innerText="Scissors";
+            document.getElementById("outcome").innerText="You Win!";
             playerCount++;
             incScore();
 
@@ -86,32 +74,20 @@ rockBTN.addEventListener("click",function(){
 paperBTN.addEventListener("click",function(){
     let ranNumb = Math.floor(Math.random() * 3) + 1;
         if (ranNumb == 1 & choosePaper ==1) {
-            document.getElementById("compRock").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="block";
-            document.getElementById("winComputer").style.display="none";
+            document.getElementById("computerSelection").innerText="Rock";
+            document.getElementById("outcome").innerText="You Win!";
             playerCount++;
             incScore();
 
         }
         else if (ranNumb == 2) {
-            document.getElementById("compPaper").style.display="block";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="block";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="none";
+            document.getElementById("computerSelection").innerText="Paper";
+            document.getElementById("outcome").innerText="It's a draw!";
             
         }
         else if (ranNumb ==3) {
-            document.getElementById("compScissors").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="block"
+            document.getElementById("computerSelection").innerText="Scissors";
+            document.getElementById("outcome").innerText="Computer Wins!";
             computerCount++;
             incCompScore();
         }
@@ -120,32 +96,20 @@ paperBTN.addEventListener("click",function(){
 scissorsBTN.addEventListener("click",function(){
     let ranNumb = Math.floor(Math.random() * 3) + 1;
         if (ranNumb == 1 & chooseScissors ==1) {
-            document.getElementById("compRock").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="block";
+            document.getElementById("computerSelection").innerText="Rock";
+            document.getElementById("outcome").innerText="Computer Wins!";
             computerCount++;
             incCompScore();
         }
         else if (ranNumb == 2) {
-            document.getElementById("compPaper").style.display="block";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("compScissors").style.display="none";
-            document.getElementById("drawMessage").style.display="none";
-            document.getElementById("winPlayer").style.display="block";
-            document.getElementById("winComputer").style.display="none";
+            document.getElementById("computerSelection").innerText="Paper";
+            document.getElementById("outcome").innerText="You Win!";
             playerCount++
             incScore();
         }
         else if (ranNumb ==3) {
-            document.getElementById("compScissors").style.display="block";
-            document.getElementById("compPaper").style.display="none";
-            document.getElementById("compRock").style.display="none";
-            document.getElementById("drawMessage").style.display="block";
-            document.getElementById("winPlayer").style.display="none";
-            document.getElementById("winComputer").style.display="none";
+            document.getElementById("computerSelection").innerText="Scissors";
+            document.getElementById("outcome").innerText="It's a draw!";
         }
 });
 
