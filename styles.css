@@ -3,8 +3,6 @@ body {
     font-family: "DM Sans"
 }
 
-
-
 h1 {
     display: flex;
     justify-content: center;
@@ -40,4 +38,8 @@ h1 {
 
 #replay {
     visibility: hidden;
+}
+
+.weapons, .opponent {
+    padding-top: 15px;
 }
