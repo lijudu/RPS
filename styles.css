@@ -1,4 +1,21 @@
 /* rock paper scissors!! */
+body {
+    font-family: "DM Sans"
+}
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.prompt, .weapons, .opponent, .outcome, .fiveRounds, .pScore, .cScore, #playerScore, #compScore, .computerSelection {
+    display: flex;
+    justify-content: center;
+}
+
 #compRock {
     display: none;
 }
@@ -23,14 +40,16 @@
     display: none;
 }
 
-#winRound {
-    display: none;
+#winMessage {
+    display: flex;
+    justify-content: center;
 }
 
-#compRound {
-    display: none;
+.replaybox {
+    display: flex;
+    justify-content: center;
 }
 
 #replay {
-    display: none;
+    visibility: hidden;
 }

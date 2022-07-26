@@ -6,9 +6,15 @@
         <title>Rock, Paper, Scissors!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div class ="headerContainer">
+            <h1>Rock, Paper, Scissors!</h1>
+            </div>
         <div class="prompt">
         Choose your weapon!
         </div>
@@ -29,14 +35,20 @@
             <div id="drawMessage">This round is a draw!</div>
         </div>
         <div class="fiveRounds">Get 5 Points to Win!</div>
-            <div>Player Score</div>
+            <div class="pScore">Player Score</div>
                 <div id="playerScore">0</div>
-            <div>Computer Score</div>
+            <div class="cScore">Computer Score</div>
                 <div id="compScore">0</div>
-            <div id="winRound">Congratulations, you win!</div>
-            <div id="compRound">Computer wins!</div>
-        <button id="replay">Play Again</button>
+            <div id="winMessage"></div>
+            <div class="replaybox">
+                <button id="replay">Play Again</button>
+            </div>
         
     <script src="game.js" charset="utf-8"></script>
     </body>
 </html>
+
+<!-- change header -->
+<!-- use emoji images as buttons for rock paper scissors -->
+<!-- return emoji for computer rock/paper/scissors -->
+<!-- change winner notice to js innerTEXT -->

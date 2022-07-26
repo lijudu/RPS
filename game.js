@@ -33,15 +33,15 @@ var totalComputerScore = document.getElementById("compScore");
 //update player and computer score
 
 function incScore() {
-    var valuePlayer = totalPlayerScore.innerHTML;
+    var valuePlayer = totalPlayerScore.innerText;
     valuePlayer++;
-    document.getElementById("playerScore").innerHTML = valuePlayer;
+    document.getElementById("playerScore").innerText = valuePlayer;
 }
 
 function incCompScore() {
-    var valueComp = totalComputerScore.innerHTML;
+    var valueComp = totalComputerScore.innerText;
     valueComp++;
-    document.getElementById("compScore").innerHTML = valueComp;
+    document.getElementById("compScore").innerText = valueComp;
 }
 
 
@@ -155,13 +155,13 @@ const winner = setInterval(counter, 5);
 function counter() {
     if (playerCount == 5) {
         clearInterval(winner);
-        document.getElementById("winRound").style.display="block";
+        document.getElementById("winMessage").innerText="You Win!";
         disableButtons();
         return;
     }
     else if (computerCount == 5){
         clearInterval(winner);
-        document.getElementById("compRound").style.display="block"; 
+        document.getElementById("winMessage").innerText="Computer Wins!"; 
         disableButtons();
         return;
     }
@@ -171,7 +171,7 @@ function disableButtons() {
     document.getElementById("rockBTN").disabled = true;
     document.getElementById("paperBTN").disabled = true;
     document.getElementById("scissorsBTN").disabled = true;
-    document.getElementById("replay").style.display="block";
+    document.getElementById("replay").style.visibility="visible";
 }
 //reload page after winner declared
 replay.addEventListener("click", function(){
